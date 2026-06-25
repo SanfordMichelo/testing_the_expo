@@ -359,7 +359,7 @@
         rgba(0, 0, 0, 0.82) 0%,
         rgba(0, 0, 0, 0.55) 100%
       ),
-      url("images/trans_smaller.png");
+      url("images/transparent.png");
 
     background-size: cover;
     background-position: center top;
