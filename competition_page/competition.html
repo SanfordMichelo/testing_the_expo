@@ -1,0 +1,568 @@
+<<<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cosmetology Expo Zambia 2026</title>
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="competition.css" />
+    <link rel="stylesheet" href="../footer.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          SME <span class="gold">EXPO 2026</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">HOME</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../about page/about.html">ABOUT</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#speakers">SPEAKERS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../competition_page/competition.html"
+                >COMPETITION</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../exhibitor_page/exhibitor.html"
+                >EXHIBITORS</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../sponsor_page/sponsor.html"
+                >SPONSORS</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#contact">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../developers_page/developers.html"
+                >DEVELOPERS</a
+              >
+            </li>
+          </ul>
+
+          <a href="../register_page/register.html">
+            <button class="btn pink-btn ms-lg-3 text-white">
+              REGISTER NOW
+            </button></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- END HEADER -->
+
+    <main class="comp-page">
+      <!-- ===================== HERO ===================== -->
+      <section class="comp-hero">
+        <div class="comp-spotlight" aria-hidden="true"></div>
+        <div class="container">
+          <p class="comp-eyebrow">TEVETA-REGISTERED COSMETOLOGY SCHOOLS</p>
+          <h1>Step Into The Spotlight</h1>
+          <p class="comp-hero-text">
+            The Cosmetology Expo Schools Competition gives student hairdressers,
+            nail technicians, skincare and make-up artists a stage in front of
+            industry judges, exhibitors and the public. Bring your students.
+            Show your training. Take the trophy home.
+          </p>
+          <div class="comp-hero-actions">
+            <a href="#comp-slots" class="btn btn-lg comp-btn-gold"
+              >Check Slot Availability</a
+            >
+            <a href="#comp-entry-form" class="btn btn-lg comp-btn-outline"
+              >Enter Your School</a
+            >
+          </div>
+          <p class="comp-deadline" id="comp-deadline-text">
+            <!-- filled in by competition.js -->
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== ELIGIBILITY ===================== -->
+      <section class="comp-eligibility">
+        <div class="container">
+          <div class="elig-grid">
+            <div class="elig-copy">
+              <p class="comp-eyebrow comp-eyebrow-dark">WHO CAN ENTER</p>
+              <h2>Built For TEVETA Schools</h2>
+              <p>
+                This competition is reserved for technical institutions
+                registered with the Technical Education, Vocational and
+                Entrepreneurship Training Authority (TEVETA) that run accredited
+                cosmetology programmes. If that's your school, we want you on
+                this stage.
+              </p>
+            </div>
+            <ul class="elig-list">
+              <li>
+                <span class="elig-mark">&#10003;</span>
+                Your institution holds a current TEVETA registration.
+              </li>
+              <li>
+                <span class="elig-mark">&#10003;</span>
+                You offer an accredited course in Hairdressing, Nail Technology,
+                Skincare/Esthetics or Make-up Artistry.
+              </li>
+              <li>
+                <span class="elig-mark">&#10003;</span>
+                Each school may enter up to 3 students per category.
+              </li>
+              <li>
+                <span class="elig-mark">&#10003;</span>
+                Entries are accepted until slots fill or the closing date is
+                reached — whichever comes first.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CATEGORIES ===================== -->
+      <section class="comp-categories">
+        <div class="container">
+          <h2 class="text-center">Competition Categories</h2>
+          <p class="categories-intro">
+            Pick one or enter all four — judging criteria for each category are
+            in the official rules pack shared with confirmed entrants.
+          </p>
+
+          <div class="row row-cols-2 row-cols-lg-4 gy-3 cat-row">
+            <div class="col">
+              <div class="cat-card">
+                <span class="cat-ribbon">CATEGORY</span>
+                <h3>Hair</h3>
+                <p>Cutting, styling and creative colour work.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="cat-card">
+                <span class="cat-ribbon">CATEGORY</span>
+                <h3>Nails</h3>
+                <p>Nail art, sculpting and finish technique.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="cat-card">
+                <span class="cat-ribbon">CATEGORY</span>
+                <h3>Skin</h3>
+                <p>Skincare treatment and facial technique.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="cat-card">
+                <span class="cat-ribbon">CATEGORY</span>
+                <h3>Make-Up</h3>
+                <p>Editorial, bridal and creative make-up looks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SLOT TRACKER ===================== -->
+      <section class="comp-slots" id="comp-slots">
+        <div class="container">
+          <p class="comp-eyebrow">ENTRY SLOTS</p>
+          <h2>Is There Still Room For Your School?</h2>
+
+          <div class="slot-widget">
+            <div class="slot-count">
+              <span id="slots-taken">--</span>
+              <span class="slot-divider">/</span>
+              <span id="slots-total">--</span>
+              <span class="slot-label">school slots filled</span>
+            </div>
+
+            <div
+              class="slot-track"
+              role="progressbar"
+              aria-label="Competition entry slots filled"
+              aria-valuemin="0"
+              id="slot-track"
+              aria-valuenow="0"
+              aria-valuemax="100"
+            >
+              <div class="slot-fill" id="slot-fill"></div>
+            </div>
+
+            <p class="slot-status" id="slot-status">Checking availability…</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ENTRY FORM ===================== -->
+      <section class="comp-form-section" id="comp-entry-form">
+        <div class="container">
+          <h2>School Entry Form</h2>
+          <p>
+            One form per school. We'll email confirmation and the rules pack to
+            the contact address you provide below.
+          </p>
+
+          <form id="competition-form" novalidate>
+            <div class="row">
+              <div class="col-md-7 mb-3">
+                <label for="school-name" class="form-label"
+                  >School / Institution Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="school-name"
+                  required
+                />
+              </div>
+              <div class="col-md-5 mb-3">
+                <label for="teveta-number" class="form-label"
+                  >TEVETA Registration Number</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="teveta-number"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="school-town" class="form-label"
+                >Town / Province</label
+              >
+              <input type="text" class="form-control" id="school-town" />
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="contact-person" class="form-label"
+                  >Contact Person</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contact-person"
+                  required
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="contact-position" class="form-label"
+                  >Position</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contact-position"
+                  placeholder="e.g. Head of Department"
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="comp-email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="comp-email"
+                  required
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="comp-phone" class="form-label">Phone</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="comp-phone"
+                  required
+                />
+              </div>
+            </div>
+
+            <fieldset class="mb-3">
+              <legend class="form-label">Category / Categories Entering</legend>
+              <div class="cat-check-grid">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Hair"
+                    id="cat-hair"
+                  />
+                  <label class="form-check-label" for="cat-hair">Hair</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Nails"
+                    id="cat-nails"
+                  />
+                  <label class="form-check-label" for="cat-nails">Nails</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Skin"
+                    id="cat-skin"
+                  />
+                  <label class="form-check-label" for="cat-skin">Skin</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Make-Up"
+                    id="cat-makeup"
+                  />
+                  <label class="form-check-label" for="cat-makeup"
+                    >Make-Up</label
+                  >
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="mb-3">
+              <label for="contestant-count" class="form-label"
+                >Number of Contestants</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="contestant-count"
+                min="1"
+                max="12"
+                value="1"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="comp-notes" class="form-label"
+                >Anything Else We Should Know?</label
+              >
+              <textarea
+                class="form-control"
+                id="comp-notes"
+                rows="3"
+                placeholder="Special requirements, equipment needs, etc."
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="btn comp-btn-gold"
+              id="comp-submit-btn"
+            >
+              Submit Entry
+            </button>
+            <p id="comp-form-feedback" class="form-feedback" role="status"></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- ===================== GALLERY ===================== -->
+      <!-- Placeholder imagery from the shared /assets folder — swap these
+           four tiles for real competition photos as they come in from
+           past events or the organising committee. Captions are also
+           placeholders. -->
+      <section class="comp-gallery">
+        <div class="container">
+          <p class="comp-eyebrow comp-eyebrow-dark">FROM THE STAGE</p>
+          <h2>Moments From Past Competitions</h2>
+
+          <div class="gallery-grid">
+            <button
+              type="button"
+              class="gallery-item"
+              data-bs-toggle="modal"
+              data-bs-target="#galleryModal"
+              data-img="../assets/model-2.png"
+              data-caption="Make-Up category — finalist look, Expo 2025"
+            >
+              <img
+                src="../assets/model-2.png"
+                alt="Make-up category finalist look"
+              />
+              <span class="gallery-caption">Make-Up Finalist</span>
+            </button>
+
+            <button
+              type="button"
+              class="gallery-item"
+              data-bs-toggle="modal"
+              data-bs-target="#galleryModal"
+              data-img="../assets/emerald-flower.jpg"
+              data-caption="Backstage before judging, Expo 2025"
+            >
+              <img
+                src="../assets/emerald-flower.jpg"
+                alt="Backstage before judging"
+              />
+              <span class="gallery-caption">Backstage</span>
+            </button>
+
+            <button
+              type="button"
+              class="gallery-item"
+              data-bs-toggle="modal"
+              data-bs-target="#galleryModal"
+              data-img="../assets/Xpo-design-3.png"
+              data-caption="Winners' showcase wall, Expo 2025"
+            >
+              <img src="../assets/Xpo-design-3.png" alt="Winners showcase" />
+              <span class="gallery-caption">Winners' Wall</span>
+            </button>
+
+            <button
+              type="button"
+              class="gallery-item gallery-item-soon"
+              disabled
+            >
+              <span class="gallery-soon">More photos coming soon</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox modal — shared by every gallery tile above -->
+    <div
+      class="modal fade"
+      id="galleryModal"
+      tabindex="-1"
+      aria-labelledby="galleryModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content comp-modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="galleryModalLabel">Gallery</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="galleryModalImg" src="" alt="" class="img-fluid rounded" />
+            <p id="galleryModalCaption" class="mt-3 mb-0"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <h5>Contact Us</h5>
+
+            <!-- PHONE (callable on mobile) -->
+            <div class="contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+260977123456"> +260 977 123 456 </a>
+            </div>
+
+            <!-- WHATSAPP (opens chat) -->
+            <div class="contact-item">
+              <i class="bi bi-whatsapp"></i>
+              <a
+                href="https://wa.me/260977123456"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatApp
+              </a>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <a href="mailto:msmed@msme.gov.zm">msmed@msme.gov.zm</a>
+            </div>
+
+            <!-- LOCATION (kept as text since it's not actionable here) -->
+            <div class="contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Lusaka, Zambia</span>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Social Media Links</h5>
+
+            <div class="social-icons">
+              <a
+                href="https://web.facebook.com/p/Ministry-of-Small-and-Medium-Enterprise-Development-61553670876706/?_rdc=1&_rdr#"
+                target="_blank"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/minmsme/?hl=en"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#"><i class="bi bi-tiktok"></i></a>
+
+              <a
+                href="https://www.youtube.com/channel/UCl2kdPJ8ve2TBBOpsqI4Zig"
+                target="_blank"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Our Team</h5>
+            <a href="../developers_page/developers.html" class="btn team-btn">
+              Meet the Developers
+            </a>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+          <p>© 2026 Cosmetology Expo Zambia. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../bootstrap/dist/js/bootstrap.js"></script>
+    <script src="competition.js"></script>
+  </body>
+</html>
