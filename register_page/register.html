@@ -1,11 +1,11 @@
-<<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Cosmetology Expo Zambia 2026</title>
-    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css" />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -17,26 +17,36 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="register.css" />
     <link rel="stylesheet" href="../footer.css" />
+    <link rel="stylesheet" href="register.css" />
   </head>
   <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">
-          SME <span class="gold">EXPO 2026</span>
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="../images/logo.jpg"
+            alt="SME Expo 2026 Logo"
+            class="navbar-logo"
+          />
         </a>
 
+        <!-- Mobile Toggle -->
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Navigation -->
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -50,56 +60,54 @@
             <li class="nav-item">
               <a class="nav-link" href="../index.html#speakers">SPEAKERS</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="../competition_page/competition.html"
-                >COMPETITION</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../exhibitor_page/exhibitor.html"
-                >EXHIBITORS</a
-              >
+              <a class="nav-link" href="../competition_page/competition.html">
+                COMPETITION
+              </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="../sponsor_page/sponsor.html"
-                >SPONSORS</a
-              >
+              <a class="nav-link" href="../exhibitor_page/exhibitor.html">
+                EXHIBITORS
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../sponsor_page/sponsor.html">
+                SPONSORS
+              </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="../index.html#contact">CONTACT</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../developers_page/developers.html"
-                >DEVELOPERS</a
-              >
-            </li>
           </ul>
 
-          <a href="../register_page/register.html">
-            <button class="btn pink-btn ms-lg-3 text-white">
-              REGISTER NOW
-            </button></a
-          >
+          <a href="register_page/register.html" class="ms-lg-3">
+            <button class="btn pink-btn text-white">REGISTER NOW</button>
+          </a>
         </div>
       </div>
     </nav>
+    <!-- END HEADER -->
 
     <main class="reg-page">
       <!-- ===================== HERO ===================== -->
       <section class="reg-hero">
         <div class="container">
-          <p class="reg-eyebrow">GET YOUR PASS</p>
-          <h1>Register For Cosmetology Expo 2026</h1>
+          <p class="reg-eyebrow">FOR VISITORS</p>
+          <h1><span class="reg-free">Register For Free</span></h1>
           <p class="reg-hero-text">
-            Two days of learning, exhibits, the schools competition and more for
-            the beauty, hair, nail, skin and make-up industry.
+            Free entry for visitors to the Inaugural Cosmetology Expo and MSME
+            Finance Fair Zambia 2026 — two days of exhibits, talks and the
+            training institutions competition. Training institutions, exhibitors
+            and sponsors apply through their own pages.
           </p>
           <div class="reg-quickfacts">
             <div class="quickfact">
               <span class="quickfact-label">When</span>
-              <span class="quickfact-value">14&ndash;15 July 2026</span>
+              <span class="quickfact-value">15&ndash;16 July 2026</span>
             </div>
             <div class="quickfact">
               <span class="quickfact-label">Where</span>
@@ -113,224 +121,89 @@
         </div>
       </section>
 
-      <!-- ===================== TICKETS ===================== -->
-      <section class="reg-tickets">
-        <div class="container">
-          <h2 class="text-center">Choose Your Pass</h2>
-          <p class="tickets-intro">
-            Pick a pass below, then fill in the registration form to lock it in
-            — entry is confirmed by email.
-          </p>
-
-          <div class="ticket-row">
-            <label class="ticket-stub" for="pass-general">
-              <input
-                type="radio"
-                name="pass-type"
-                id="pass-general"
-                value="General"
-                checked
-              />
-              <span class="stub-main">
-                <span class="stub-kind">General</span>
-                <span class="stub-price">K150</span>
-                <span class="stub-desc"
-                  >Full access to exhibits, talks &amp; the competition
-                  floor</span
-                >
-              </span>
-              <span class="stub-perf" aria-hidden="true"></span>
-              <span class="stub-side">ADMIT<br />ONE</span>
-            </label>
-
-            <label class="ticket-stub" for="pass-student">
-              <input
-                type="radio"
-                name="pass-type"
-                id="pass-student"
-                value="Student"
-              />
-              <span class="stub-main">
-                <span class="stub-kind">Student</span>
-                <span class="stub-price">K70</span>
-                <span class="stub-desc"
-                  >Same access, valid student ID required at the door</span
-                >
-              </span>
-              <span class="stub-perf" aria-hidden="true"></span>
-              <span class="stub-side">ADMIT<br />ONE</span>
-            </label>
-
-            <label class="ticket-stub ticket-stub-vip" for="pass-vip">
-              <input type="radio" name="pass-type" id="pass-vip" value="VIP" />
-              <span class="stub-main">
-                <span class="stub-kind">VIP</span>
-                <span class="stub-price">K400</span>
-                <span class="stub-desc"
-                  >Front-row seating, opening ceremony &amp; lounge access</span
-                >
-              </span>
-              <span class="stub-perf" aria-hidden="true"></span>
-              <span class="stub-side">ADMIT<br />ONE</span>
-            </label>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== REGISTRATION FORM ===================== -->
+      <!-- ===================== REGISTRATION: OFFICIAL FORM ===================== -->
+      <!-- Entry is free, so there's nothing to collect on-page — this
+           points straight at the official visitor registration form. -->
       <section class="reg-form-section" id="reg-form">
         <div class="container">
-          <h2>Attendee Details</h2>
-          <p>
-            Selected pass:
-            <strong id="reg-selected-pass">General — K150</strong>
-          </p>
-
-          <form id="register-form" novalidate>
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="reg-fullname" class="form-label">Full Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="reg-fullname"
-                  required
-                />
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="reg-org" class="form-label"
-                  >School / Organization (optional)</label
-                >
-                <input type="text" class="form-control" id="reg-org" />
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="reg-email" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="reg-email"
-                  required
-                />
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="reg-phone" class="form-label">Phone</label>
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="reg-phone"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="reg-tickets" class="form-label"
-                  >Number of Passes</label
-                >
-                <input
-                  type="number"
-                  class="form-control"
-                  id="reg-tickets"
-                  min="1"
-                  max="10"
-                  value="1"
-                />
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="reg-heard" class="form-label"
-                  >How Did You Hear About Us? (optional)</label
-                >
-                <select class="form-select" id="reg-heard">
-                  <option value="">Prefer not to say</option>
-                  <option value="social">Social Media</option>
-                  <option value="school">My School</option>
-                  <option value="friend">Friend / Word of Mouth</option>
-                  <option value="press">News / Press</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-check mb-3">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="reg-terms"
-                required
-              />
-              <label class="form-check-label" for="reg-terms">
-                I agree to the event terms and understand my pass is confirmed
-                by email.
-              </label>
-            </div>
-
-            <button type="submit" class="btn reg-btn-gold">
-              Complete Registration
-            </button>
-            <p id="reg-form-feedback" class="form-feedback" role="status"></p>
-          </form>
+          <div class="reg-redirect-card">
+            <h2>Register Your Visit</h2>
+            <p>
+              Takes less than a minute. You'll get a confirmation once you've
+              submitted the form.
+            </p>
+            <a
+              class="btn reg-btn-gold reg-redirect-btn"
+              href="https://forms.gle/5CX6biN5tFCXzJYA9"
+              target="_blank"
+              rel="noopener"
+            >
+              Open The Registration Form
+            </a>
+            <p class="reg-redirect-note">
+              Opens in a new tab — hosted on Google Forms.
+            </p>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="container">
         <div class="row text-center">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <h5>Contact Us</h5>
 
-            <!-- PHONE (callable on mobile) -->
             <div class="contact-item">
               <i class="bi bi-telephone-fill"></i>
-              <a href="tel:+260977123456"> +260 977 123 456 </a>
+              <a href="tel:+260968323558"> +260 968 323 558 </a>
             </div>
-
-            <!-- WHATSAPP (opens chat) -->
             <div class="contact-item">
-              <i class="bi bi-whatsapp"></i>
-              <a
-                href="https://wa.me/260977123456"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                WhatApp
-              </a>
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+260979152742">+260 979 152 742 </a>
             </div>
 
             <div class="contact-item">
               <i class="bi bi-envelope-fill"></i>
-              <a href="mailto:info@cosmetologyexpo.com">
-                info@cosmetologyexpo.com
-              </a>
+              <a href="mailto:msmed@msme.gov.zm">msmed@msme.gov.zm</a>
             </div>
 
-            <!-- LOCATION (kept as text since it's not actionable here) -->
             <div class="contact-item">
               <i class="bi bi-geo-alt-fill"></i>
               <span>Lusaka, Zambia</span>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <h5>Follow Us</h5>
+          <div class="col-md-3">
+            <h5>Social Media Links</h5>
 
             <div class="social-icons">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
-              <a href="#"><i class="bi bi-tiktok"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a
+                href="https://web.facebook.com/p/Ministry-of-Small-and-Medium-Enterprise-Development-61553670876706/?_rdc=1&_rdr#"
+                target="_blank"
+              >
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCl2kdPJ8ve2TBBOpsqI4Zig"
+                target="_blank"
+              >
+                <i class="bi bi-youtube"></i>
+              </a>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-3">
             <h5>Our Team</h5>
-            <a href="../developers_page/developers.html" class="btn team-btn">
-              Meet the Developers
+            <a href="../team_page/team.html" class="btn team-btn">
+              Meet the Team
+            </a>
+          </div>
+
+          <div class="col-md-3">
+            <h5>The Developers</h5>
+            <a href="../developers_page/developer.html" class="btn team-btn">
+              Meet the developers
             </a>
           </div>
         </div>

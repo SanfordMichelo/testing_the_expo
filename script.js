@@ -32,3 +32,97 @@ const countdown = setInterval(function () {
     document.getElementById("seconds").innerText = "00";
   }
 }, 1000);
+
+const competitionSlides = document.querySelectorAll(".competition-slide");
+const competitionPrev = document.querySelector(".competition-prev");
+const competitionNext = document.querySelector(".competition-next");
+const competitionDotsContainer = document.querySelector(".competition-dots");
+
+let competitionCurrent = 0;
+let competitionInterval;
+
+// Create dots
+competitionSlides.forEach((slide, index) => {
+
+    const dot = document.createElement("span");
+    dot.classList.add("competition-dot");
+
+    if (index === 0) {
+        dot.classList.add("competition-active");
+    }
+
+    dot.addEventListener("click", () => {
+        competitionCurrent = index;
+        showCompetitionSlide(competitionCurrent);
+        resetCompetitionTimer();
+    });
+
+    competitionDotsContainer.appendChild(dot);
+});
+
+const competitionDots = document.querySelectorAll(".competition-dot");
+
+function showCompetitionSlide(index) {
+
+    // smoother DOM update (prevents flicker)
+    requestAnimationFrame(() => {
+
+        competitionSlides.forEach(slide =>
+            slide.classList.remove("competition-active")
+        );
+
+        competitionDots.forEach(dot =>
+            dot.classList.remove("competition-active")
+        );
+
+        competitionSlides[index].classList.add("competition-active");
+        competitionDots[index].classList.add("competition-active");
+    });
+}
+
+function nextCompetitionSlide() {
+
+    competitionCurrent++;
+
+    if (competitionCurrent >= competitionSlides.length) {
+        competitionCurrent = 0;
+    }
+
+    showCompetitionSlide(competitionCurrent);
+}
+
+function previousCompetitionSlide() {
+
+    competitionCurrent--;
+
+    if (competitionCurrent < 0) {
+        competitionCurrent = competitionSlides.length - 1;
+    }
+
+    showCompetitionSlide(competitionCurrent);
+}
+
+competitionNext.addEventListener("click", () => {
+    nextCompetitionSlide();
+    resetCompetitionTimer();
+});
+
+competitionPrev.addEventListener("click", () => {
+    previousCompetitionSlide();
+    resetCompetitionTimer();
+});
+
+function startCompetitionSlider() {
+
+    // ⚡ 1 SLIDE PER SECOND
+    competitionInterval = setInterval(nextCompetitionSlide, 1000);
+}
+
+function resetCompetitionTimer() {
+
+    clearInterval(competitionInterval);
+    startCompetitionSlider();
+}
+
+// start slider
+startCompetitionSlider();

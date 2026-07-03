@@ -50,7 +50,7 @@
       rgba(16, 42, 28, 0.88),
       rgba(16, 42, 28, 0.88)
     ),
-    url(../assets/emerald-flower.jpg);
+    url(../images/emerald-flower.jpg);
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -71,6 +71,9 @@
   letter-spacing: 0.5px;
   margin: 0 auto 16px;
   max-width: 720px;
+}
+.reg-free {
+  color: var(--reg-gold-bright);
 }
 .reg-hero-text {
   max-width: 560px;
@@ -104,139 +107,26 @@
   font-size: 1.05rem;
 }
 
-/* ===================== TICKETS ===================== */
-.reg-tickets {
-  background: var(--reg-cream);
-  padding: 64px 0 70px;
-}
-.tickets-intro {
-  text-align: center;
-  max-width: 560px;
-  margin: 8px auto 40px;
-  color: #555;
-}
-.ticket-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 26px;
-  justify-content: center;
-}
-
-/* ---- Ticket stub: the page's signature element. Built like a real
-   event pass — a perforated line and an "ADMIT ONE" stub end, made
-   with a repeating-gradient edge and a couple of radial-gradient
-   "punch holes". ---- */
-.ticket-stub {
-  position: relative;
-  display: flex;
-  width: 320px;
-  cursor: pointer;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 8px 22px rgba(16, 42, 28, 0.1);
-  overflow: hidden;
-  border: 2px solid transparent;
-  transition: border-color 0.15s ease, transform 0.15s ease;
-}
-.ticket-stub:hover {
-  transform: translateY(-4px);
-}
-.ticket-stub input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-.ticket-stub:has(input:checked) {
-  border-color: var(--reg-gold);
-}
-.ticket-stub.selected {
-  border-color: var(--reg-gold);
-}
-.stub-main {
-  flex: 1;
-  padding: 22px 18px;
-  display: flex;
-  flex-direction: column;
-}
-.stub-kind {
-  font-family: "Folklore", serif;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 1.15rem;
-  color: var(--reg-green-deep);
-}
-.stub-price {
-  font-family: "Landasans", sans-serif;
-  font-size: 1.6rem;
-  color: var(--reg-green);
-  margin: 4px 0 8px;
-}
-.stub-desc {
-  font-size: 0.82rem;
-  color: #666;
-  line-height: 1.4;
-}
-.stub-perf {
-  width: 0;
-  border-left: 2px dashed rgba(16, 42, 28, 0.18);
-  position: relative;
-}
-.stub-perf::before,
-.stub-perf::after {
-  content: "";
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  background: var(--reg-cream);
-  border-radius: 50%;
-  left: -8px;
-}
-.stub-perf::before {
-  top: -7px;
-}
-.stub-perf::after {
-  bottom: -7px;
-}
-.stub-side {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Landasans", sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  color: #fff;
-  background: var(--reg-green-deep);
-  padding: 14px 8px;
-}
-.ticket-stub-vip .stub-side {
-  background: linear-gradient(180deg, var(--reg-gold), var(--reg-brown));
-}
-.ticket-stub-vip .stub-price {
-  color: var(--reg-gold);
-}
-
-/* ===================== REGISTRATION FORM ===================== */
+/* ===================== REGISTRATION: OFFICIAL FORM ===================== */
 .reg-form-section {
   background: #fff;
   padding: 70px 0;
 }
-.reg-form-section h2 {
-  text-align: center;
-}
-.reg-form-section > .container > p {
-  text-align: center;
-  color: #555;
-  margin-bottom: 32px;
-}
-#register-form {
-  max-width: 700px;
+.reg-redirect-card {
+  max-width: 560px;
   margin: 0 auto;
   background: var(--reg-cream);
-  padding: 32px;
+  padding: 44px 36px;
   border-radius: 12px;
   box-shadow: 0 8px 26px rgba(16, 42, 28, 0.06);
+  text-align: center;
+}
+.reg-redirect-card h2 {
+  margin: 0 0 12px;
+}
+.reg-redirect-card p {
+  color: #555;
+  margin-bottom: 22px;
 }
 .reg-btn-gold {
   background-color: var(--reg-green-deep);
@@ -251,15 +141,14 @@
   border-color: var(--reg-green);
   color: #fff;
 }
-.form-feedback {
-  margin-top: 14px;
-  font-weight: 600;
+.reg-redirect-btn {
+  display: inline-block;
 }
-.form-feedback.success {
-  color: var(--reg-green);
-}
-.form-feedback.error {
-  color: var(--reg-red);
+.reg-redirect-note {
+  margin: 14px 0 0;
+  font-size: 0.78rem;
+  color: #999;
+  font-style: italic;
 }
 
 /* ===================== FOOTER STUB ===================== */
@@ -275,8 +164,5 @@
 @media (max-width: 576px) {
   .reg-hero h1 {
     font-size: 1.8rem;
-  }
-  .ticket-stub {
-    width: 100%;
   }
 }

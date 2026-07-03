@@ -23,19 +23,29 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">
-          SME <span class="gold">EXPO 2026</span>
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="images/logo.jpg"
+            alt="SME Expo 2026 Logo"
+            class="navbar-logo"
+          />
         </a>
 
+        <!-- Mobile Toggle -->
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Navigation -->
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -49,36 +59,33 @@
             <li class="nav-item">
               <a class="nav-link" href="#speakers">SPEAKERS</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="competition_page/competition.html"
-                >COMPETITION</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="exhibitor_page/exhibitor.html"
-                >EXHIBITORS</a
-              >
+              <a class="nav-link" href="competition_page/competition.html">
+                COMPETITION
+              </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="sponsor_page/sponsor.html">SPONSORS</a>
+              <a class="nav-link" href="exhibitor_page/exhibitor.html">
+                EXHIBITORS
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="sponsor_page/sponsor.html">
+                SPONSORS
+              </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="#contact">CONTACT</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="developers_page/developers.html"
-                >DEVELOPERS</a
-              >
-            </li>
           </ul>
 
-          <a href="register_page/register.html">
-            <button class="btn pink-btn ms-lg-3 text-white">
-              REGISTER NOW
-            </button></a
-          >
+          <a href="register_page/register.html" class="ms-lg-3">
+            <button class="btn pink-btn text-white">REGISTER NOW</button>
+          </a>
         </div>
       </div>
     </nav>
@@ -86,7 +93,9 @@
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
-          <div class="hero-tag">COSMETOLOGY EXPO ZAMBIA 2026</div>
+          <div class="hero-tag">
+            Inaugural Cosmetology EXPO and MSME Finance Fair Zambia 2026
+          </div>
 
           <div class="hero-heading">
             <h1 class="hero-title">
@@ -102,14 +111,14 @@
             </p>
 
             <div class="hero-actions">
-              <a href="register_page/register.html" class="hero-btn">
+              <a href="../register_page/register.html" class="hero-btn">
                 Register For Free
               </a>
             </div>
           </div>
 
           <div class="hero-info">
-            <div class="info-pill">📍 ZICAS</div>
+            <div class="info-pill">📍 ZCAS</div>
 
             <div class="info-pill">📅 15–16 July 2026</div>
           </div>
@@ -173,7 +182,7 @@
           <div class="col-md-3 col-6">
             <div class="value-box">
               <i class="bi bi-graph-up-arrow"></i>
-              <h5>Grow</h5>
+              <h5>Finance Fair</h5>
             </div>
           </div>
         </div>
@@ -183,7 +192,7 @@
         <div class="row g-4 justify-content-center">
           <div class="col-12 col-md-6 col-lg-3">
             <div class="beauty-card">
-              <img src="images/hair.jpg" alt="Hair" />
+              <img src="images/hair.webp" alt="Hair" />
               <h6>Hair</h6>
             </div>
           </div>
@@ -211,6 +220,7 @@
         </div>
       </div>
     </section>
+
     <!-- HOME ABOUT SECTION -->
     <section id="home-about" class="home-about-section py-5">
       <div class="container">
@@ -230,22 +240,114 @@
               launches, masterclasses, and exhibitions from top local and
               international brands.
             </p>
-
-            <a
-              href="register_page/register.html"
-              class="btn btn-primary home-about-btn mt-3"
-            >
-              Learn More
-            </a>
           </div>
-
           <div class="col-md-6 home-about-image">
             <img
-              src="images/hero.webp"
+              src="images/about.webp"
               class="img-fluid rounded home-about-img"
               alt="About Expo"
             />
           </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==========================================
+     COMPETITION CATEGORIES
+========================================== -->
+    <section class="competition-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="expo-title mt-3">Competition Categories</h2>
+
+          <p class="expo-subtitle">
+            Witness Zambia's finest beauty professionals compete in exciting
+            live competitions.
+          </p>
+        </div>
+
+        <div class="competition-slider">
+          <div class="competition-slides">
+            <!-- Logo -->
+            <div class="competition-slide competition-active">
+              <img src="images/about.webp" alt="Bridal Makeup" />
+              <div class="competition-slide-content">
+                <h3>Bridal Makeup</h3>
+              </div>
+            </div>
+            <!-- Bridal Makeup -->
+            <div class="competition-slide competition-active">
+              <img src="images/Bridal_pic.webp" alt="Bridal Makeup" />
+              <div class="competition-slide-content">
+                <h3>Bridal Makeup</h3>
+              </div>
+            </div>
+
+            <!-- Editorial Makeup -->
+            <div class="competition-slide">
+              <img src="images/Editorial_Makeup.webp" alt="Editorial Makeup" />
+              <div class="competition-slide-content">
+                <h3>Editorial Makeup</h3>
+              </div>
+            </div>
+
+            <!-- Nail Tech -->
+            <div class="competition-slide">
+              <img src="images/Nail_Tech.webp" alt="Nail Technology" />
+              <div class="competition-slide-content">
+                <h3>Nail Technology</h3>
+              </div>
+            </div>
+
+            <!-- Barbering -->
+            <div class="competition-slide">
+              <img src="images/barber.webp" alt="Barbering" />
+              <div class="competition-slide-content">
+                <h3>Barbering</h3>
+              </div>
+            </div>
+
+            <!-- Wig Installation -->
+            <div class="competition-slide">
+              <img src="images/wig.webp" alt="Wig Installation" />
+              <div class="competition-slide-content">
+                <h3>Wig Installation</h3>
+              </div>
+            </div>
+
+            <!-- Natural Hair -->
+            <div class="competition-slide">
+              <img src="images/natural.webp" alt="Natural Hair" />
+              <div class="competition-slide-content">
+                <h3>Natural Hair</h3>
+              </div>
+            </div>
+
+            <!-- Hair Braiding -->
+            <div class="competition-slide">
+              <img src="images/braiding.webp" alt="Hair Braiding" />
+              <div class="competition-slide-content">
+                <h3>Hair Braiding</h3>
+              </div>
+            </div>
+
+            <!-- Spa & Massage -->
+            <div class="competition-slide">
+              <img src="images/spa.webp" alt="Spa and Massage" />
+              <div class="competition-slide-content">
+                <h3>Spa &amp; Massage</h3>
+              </div>
+            </div>
+          </div>
+
+          <button class="competition-prev" aria-label="Previous Slide">
+            &#10094;
+          </button>
+
+          <button class="competition-next" aria-label="Next Slide">
+            &#10095;
+          </button>
+
+          <div class="competition-dots"></div>
         </div>
       </div>
     </section>
@@ -261,61 +363,160 @@
 
         <div class="row g-4">
           <!-- Speaker 1 -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="speaker-card">
-              <img src="images/speaker1.webp" alt="Dr. Beauty Nkonde" />
+              <img src="images/chibesa.webp" alt="Dr Chibesa Mulubwa" />
               <div class="speaker-info">
-                <h5>Dr. Beauty Nkonde</h5>
-                <small>Skincare Specialist</small>
-                <p>
-                  Expert in dermatology and advanced skin treatments with 15+
-                  years of experience.
-                </p>
+                <h5>Dr Chibesa Mulubwa</h5>
+                <small>Dermatologist</small>
+                <p>Expert in dermatology and advanced skin treatments.</p>
               </div>
             </div>
           </div>
 
           <!-- Speaker 2 -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="speaker-card">
-              <img src="images/speaker2.webp" alt="Maria Johnson" />
+              <img
+                src="images/antangambuyu.webp"
+                alt="Atangambuyu Batunda Kupa"
+              />
               <div class="speaker-info">
-                <h5>Maria Johnson</h5>
-                <small>Cosmetics Brand Founder</small>
-                <p>
-                  Founder of a global beauty brand focused on inclusive cosmetic
-                  products.
-                </p>
+                <h5>Atangambuyu Batunda Kupa</h5>
+                <small>Co-founder</small>
+                <p>Natural Hair Care</p>
               </div>
             </div>
           </div>
 
           <!-- Speaker 3 -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="speaker-card">
-              <img src="images/speaker3.webp" alt="James Banda" />
+              <img src="images/jean.webp" alt="Jean Damascene Nyamuganza" />
               <div class="speaker-info">
-                <h5>James Banda</h5>
-                <small>Hair Industry Expert</small>
-                <p>
-                  Specialist in modern haircare techniques and salon business
-                  growth.
-                </p>
+                <h5>Jean Damascene Nyamuganza</h5>
+                <small>Director of Operations & Training</small>
+                <p>Kabash Institute of Entrepreneurship</p>
               </div>
             </div>
           </div>
 
           <!-- Speaker 4 -->
-          <div class="col-md-3 col-sm-6">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="speaker-card">
-              <img src="images/speaker4.jpg" alt="Linda Mwape" />
+              <img src="images/mwenya.webp" alt="Mwenya Kalyati" />
               <div class="speaker-info">
-                <h5>Linda Mwape</h5>
-                <small>Beauty Entrepreneur</small>
-                <p>
-                  Serial entrepreneur empowering young women in the beauty
-                  industry.
-                </p>
+                <h5>Mwenya Kalyati</h5>
+                <small>CEO</small>
+                <p>Vellus Laundry / Wig Launderette</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 5 -->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="speaker-card">
+              <img src="images/nambela.webp" alt="Nambela Helen Kasaka" />
+              <div class="speaker-info">
+                <h5>Nambela Helen Kasaka</h5>
+                <small>Beauty Specialist</small>
+                <p>Namiwe Beauty Salon</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 6 -->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="speaker-card">
+              <img src="images/natasha.webp" alt="Natasha Shinondo" />
+              <div class="speaker-info">
+                <h5>Natasha Shinondo</h5>
+                <small>Founder & MD</small>
+                <p>Peppermint Cuts and Curls</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 7 -->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="speaker-card">
+              <img src="images/patience.webp" alt="Patience Lombe Ilunga" />
+              <div class="speaker-info">
+                <h5>Patience Lombe Ilunga</h5>
+                <small>Founder & Owner</small>
+                <p>Whitetouch Aesthetics Spa</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 8 -->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="speaker-card">
+              <img src="images/rosemary.webp" alt="Tiyeko Rosemary Mwale" />
+              <div class="speaker-info">
+                <h5>Tiyeko Rosemary Mwale</h5>
+                <small>Owner</small>
+                <p>My Hair is Zambian</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 9 -->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="speaker-card">
+              <img src="images/fiston.png" alt="Kawangu Fiston" />
+              <div class="speaker-info">
+                <h5>Kawangu Fiston</h5>
+                <small>Founder</small>
+                <p>FKM Hair Dressing</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 10 -->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="speaker-card">
+              <img src="images/titus.webp" alt="Titus Lukwesa" />
+              <div class="speaker-info">
+                <h5>Titus Lukwesa (Tito)</h5>
+                <small>Founder</small>
+                <p>Tito The Barber</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 11 -->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="speaker-card">
+              <img src="images/tatiana.webp" alt="Tatiana Mulenga" />
+              <div class="speaker-info">
+                <h5>Tatiana Mulenga</h5>
+                <small>Director</small>
+                <p>Tati Beauty SPA & Academy</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 12 -->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="speaker-card">
+              <img src="images/sarah.webp" alt="Tatiana Mulenga" />
+              <div class="speaker-info">
+                <h5>Sarah Musangu Mako</h5>
+                <small>Proprietor/Founder</small>
+                <p>Royalty Makeup and Hair</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 13 -->
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="speaker-card">
+              <img src="images/michael.webp" alt="Michael Siwelwa" />
+              <div class="speaker-info">
+                <h5>Michael Siwelwa</h5>
+                <small>Founder</small>
+                <p>Micheal Garden of Beauty</p>
               </div>
             </div>
           </div>
@@ -323,7 +524,7 @@
       </div>
     </section>
     <!-- SPONSORS SECTION -->
-    <section id="sponsors" class="py-5">
+    <section id="sponsors" class="sponsors-section py-5">
       <div class="container text-center">
         <h2 class="mb-2">Our Sponsors & Partners</h2>
 
@@ -337,91 +538,29 @@
           Become a Sponsor / View Packages
         </a>
 
-        <h4 class="mt-5 text-white">Our Current Sponsors</h4>
-
-        <div class="sponsor-marquee">
-          <div class="sponsor-track">
-            <!-- SPONSOR CARD (CLICKABLE) -->
+        <h4 class="mt-5">Our Current Sponsors</h4>
+        <div class="row justify-content-center align-items-stretch mt-4 g-4">
+          <!-- ZANACO -->
+          <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
             <a
               href="https://www.zanaco.co.zm"
               target="_blank"
-              class="sponsor-card"
+              class="sponsor-card zanaco"
             >
-              <img src="images/zanaco.jpg" alt="ZANACO" />
+              <img src="images/zanaco.jpg" alt="ZANACO Bank" />
               <h6>ZANACO Bank</h6>
             </a>
+          </div>
 
+          <!-- UNDP -->
+          <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
             <a
-              href="https://www.absa.co.zm"
+              href="https://www.undp.org/"
               target="_blank"
-              class="sponsor-card"
+              class="sponsor-card undp"
             >
-              <img src="images/absa.png" alt="ABSA" />
-              <h6>ABSA Bank Zambia PLC</h6>
-            </a>
-
-            <a
-              href="https://www.stanbicbank.co.zm"
-              target="_blank"
-              class="sponsor-card"
-            >
-              <img src="images/stanbic.jpg" alt="Stanbic" />
-              <h6>Stanbic Bank</h6>
-            </a>
-
-            <a
-              href="https://www.ubagroup.com"
-              target="_blank"
-              class="sponsor-card"
-            >
-              <img src="images/uba.png" alt="UBA" />
-              <h6>UBA Zambia</h6>
-            </a>
-
-            <a
-              href="https://www.airtel.co.zm"
-              target="_blank"
-              class="sponsor-card"
-            >
-              <img src="images/airtel.png" alt="Airtel" />
-              <h6>Airtel Zambia</h6>
-            </a>
-
-            <a
-              href="https://www.zamtel.zm"
-              target="_blank"
-              class="sponsor-card"
-            >
-              <img src="images/zamtel.png" alt="Zamtel" />
-              <h6>Zamtel Zambia</h6>
-            </a>
-
-            <a
-              href="https://www.mtn.co.zm"
-              target="_blank"
-              class="sponsor-card"
-            >
-              <img src="images/mtn.png" alt="MTN" />
-              <h6>MTN Zambia</h6>
-            </a>
-
-            <!-- DUPLICATE FOR LOOP -->
-            <a
-              href="https://www.zanaco.co.zm"
-              target="_blank"
-              class="sponsor-card"
-            >
-              <img src="images/zanaco.jpg" alt="ZANACO" />
-              <h6>Zanaco Bank</h6>
-            </a>
-
-            <a
-              href="https://www.absa.co.zm"
-              target="_blank"
-              class="sponsor-card"
-            >
-              <img src="images/absa.png" alt="ABSA" />
-              <h6>Absa Bank Zambia PLC</h6>
+              <img src="images/undp.png" alt="UNDP" />
+              <h6>UNDP</h6>
             </a>
           </div>
         </div>
@@ -431,64 +570,59 @@
     <footer class="footer" id="contact">
       <div class="container">
         <div class="row text-center">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <h5>Contact Us</h5>
 
-            <!-- PHONE (callable on mobile) -->
             <div class="contact-item">
               <i class="bi bi-telephone-fill"></i>
-              <a href="tel:+260977123456"> +260 977 123 456 </a>
+              <a href="tel:+260968323558"> +260 968 323 558 </a>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+260979152742">+260 979 152 742 </a>
             </div>
 
-            <!-- WHATSAPP (opens chat) -->
-            <div class="contact-item">
-              <i class="bi bi-whatsapp"></i>
-              <a
-                href="https://wa.me/260977123456"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                WhatApp
-              </a>
-            </div>
             <div class="contact-item">
               <i class="bi bi-envelope-fill"></i>
               <a href="mailto:msmed@msme.gov.zm">msmed@msme.gov.zm</a>
             </div>
 
-            <!-- LOCATION (kept as text since it's not actionable here) -->
             <div class="contact-item">
               <i class="bi bi-geo-alt-fill"></i>
               <span>Lusaka, Zambia</span>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-3">
             <h5>Social Media Links</h5>
 
             <div class="social-icons">
               <a
                 href="https://web.facebook.com/p/Ministry-of-Small-and-Medium-Enterprise-Development-61553670876706/?_rdc=1&_rdr#"
                 target="_blank"
-                ><i class="bi bi-facebook"></i
-              ></a>
-              <a href="https://www.instagram.com/minmsme/?hl=en"
-                ><i class="bi bi-instagram"></i
-              ></a>
-              <a href="#"><i class="bi bi-tiktok"></i></a>
-
+              >
+                <i class="bi bi-facebook"></i>
+              </a>
               <a
                 href="https://www.youtube.com/channel/UCl2kdPJ8ve2TBBOpsqI4Zig"
                 target="_blank"
-                ><i class="bi bi-youtube"></i
-              ></a>
+              >
+                <i class="bi bi-youtube"></i>
+              </a>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-3">
             <h5>Our Team</h5>
-            <a href="developers_page/developers.html" class="btn team-btn">
-              Meet the Developers
+            <a href="team_page/team.html" class="btn team-btn">
+              Meet the Team
+            </a>
+          </div>
+
+          <div class="col-md-3">
+            <h5>The Developers</h5>
+            <a href="developers_page/developer.html" class="btn team-btn">
+              Meet the developers
             </a>
           </div>
         </div>

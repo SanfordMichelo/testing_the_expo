@@ -1,3 +1,24 @@
+ /* Logo */
+.navbar-logo {
+  height: 60px; /* Adjust if needed */
+  width: auto;
+  display: block;
+}
+
+/* Navbar brand */
+.navbar-brand {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile */
+@media (max-width: 991.98px) {
+  .navbar-logo {
+    height: 50px;
+  }
+}
+ 
  .navbar .nav-link {
    color: #f5f1e6;
    /* soft ivory instead of white */
@@ -103,14 +124,14 @@
   overflow: hidden;
 
   background:
-    linear-gradient(
+  linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.88) 0%,
       rgba(0, 0, 0, 0.65) 35%,
       rgba(0, 0, 0, 0.30) 60%,
       rgba(0, 0, 0, 0.05) 100%
-    ),
-    url("images/model.webp");
+    ), 
+    url("images/background.webp");
 
   background-size: cover;
  
@@ -131,33 +152,44 @@
   padding-top: 80px;
   padding-bottom: 40px;
 }
-
-/* ==========================================
-   EVENT TAG
-========================================== */
-
 .hero-tag {
   display: inline-flex;
   align-items: center;
-
-  padding: 10px 20px;
-  margin-bottom: 1.5rem;
-
-  border-radius: 999px;
+  gap: 10px;
+  padding: 12px 24px;
+  margin-bottom: 30px;
 
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-left: 5px solid #d4af37;
+  border-radius: 50px;
 
-  color: #fff;
-  font-size: 1.7;
+  color: #ffffff;
+  font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
+  line-height: 1.5;
+
+  width: fit-content;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.25),
+    0 0 20px rgba(212,175,55,.15);
+
+  transition: all .35s ease;
 }
 
-/* ==========================================
+.hero-tag:hover{
+    transform: translateY(-3px);
+    border-color:#d4af37;
+    box-shadow:
+      0 15px 40px rgba(0,0,0,.35),
+      0 0 30px rgba(212,175,55,.35);
+}/* ==========================================
    HEADING AREA
 ========================================== */
 
@@ -206,43 +238,46 @@
   font-size: 1rem;
   line-height: 1.8;
 }
-
-/* ==========================================
-   CTA BUTTON
-========================================== */
-
 .hero-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 14px 34px;
-
-  border-radius: 999px;
-
+  display: inline-block;
   text-decoration: none;
 
-  color: #fff;
-
-  font-weight: 700;
-  letter-spacing: 0.5px;
-
-  background: rgba(255, 255, 255, 0.12);
-
-  backdrop-filter: blur(12px);
-
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
+  background: linear-gradient(135deg, #d4af37, #f5e6a8);
+  color: #0b1f14;
+  border: none;
+  padding: 10px 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-btn:hover {
+  color: #0b1f14;
+  text-decoration: none;
   transform: translateY(-3px);
-
-  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45);
+  background: linear-gradient(135deg, #f5e6a8, #d4af37);
 }
 
-/* ==========================================
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+
+.hero-btn:hover::before {
+  left: 130%;
+}/* ==========================================
    EVENT INFO
 ========================================== */
 
@@ -268,7 +303,6 @@
   color: #fff;
   font-size: 0.95rem;
 }
-
 /* ==========================================
    COUNTDOWN
 ========================================== */
@@ -276,23 +310,19 @@
 .countdown-card {
   display: flex;
   flex-wrap: wrap;
-
-  gap: 15px;
-
-  margin-top: 1.8rem;
+  gap: 20px;
+  margin-top: 2rem;
 }
 
 .time-box {
-  min-width: 85px;
+  min-width: 130px;      /* Increased from 85px */
+  padding: 28px 22px;    /* Bigger box */
 
   text-align: center;
 
-  padding: 16px;
-
-  border-radius: 18px;
+  border-radius: 20px;
 
   background: rgba(255, 255, 255, 0.08);
-
   backdrop-filter: blur(10px);
 
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -300,23 +330,24 @@
 
 .time-box span {
   display: block;
-
   color: #fff;
 
-  font-size: 1.8rem;
+  font-size: 3rem;       /* Increased from 1.8rem */
   font-weight: 700;
+  line-height: 1;
 }
 
 .time-box small {
-  color: rgba(255, 255, 255, 0.75);
+  display: block;
+  margin-top: 10px;
 
-  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
 
-  letter-spacing: 1px;
+  font-size: 0.95rem;    /* Increased from 0.75rem */
 
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
-
 /* ==========================================
    TABLETS
 ========================================== */
@@ -359,7 +390,7 @@
         rgba(0, 0, 0, 0.82) 0%,
         rgba(0, 0, 0, 0.55) 100%
       ),
-      url("images/denver.webp");
+      url("images/smaller_screens.webp");
 
     background-size: cover;
     background-position: center top;
@@ -623,6 +654,8 @@ background:#fff;
     height: 240px;
   }
 } 
+
+
 /* =========================
    HOME ABOUT SECTION (GREEN THEME)
 ========================= */
@@ -641,73 +674,314 @@ background:#fff;
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.7;
 }
-
-.home-about-btn {
-  background-color: #fff;
-  color: #0b5d3b;
-  border: none;
-  font-weight: 600;
-}
-
-.home-about-btn:hover {
-  background-color: #e6f5ee;
-  color: #0b5d3b;
-}
-
 .home-about-img {
   width: 100%;
   border-radius: 0.5rem;
 }
+/*==========================================
+COMPETITION SLIDER (FIXED SMOOTH VERSION)
+==========================================*/
+
+.competition-section {
+  background: #fff;
+  overflow: hidden;
+}
+
+.competition-slider {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* SLIDES CONTAINER */
+.competition-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* EACH SLIDE */
+.competition-slide {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  transform: scale(1.03);
+
+  transition: opacity 1s ease, transform 1s ease;
+
+  z-index: 0;
+}
+
+/* ACTIVE SLIDE */
+.competition-slide.competition-active {
+  opacity: 1;
+  transform: scale(1);
+
+  z-index: 2;
+}
+
+/* IMAGE */
+.competition-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  /* reduces harsh visual flicker during change */
+  filter: brightness(0.85);
+  transition: filter 1s ease;
+}
+
+/* OVERLAY CONTENT */
+.competition-slide-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 45px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.4),
+    transparent
+  );
+}
+
+.competition-slide-content h3 {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.competition-slide-content p {
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+  font-size: 1rem;
+  max-width: 550px;
+  line-height: 1.6;
+}
+
+/*==========================================
+BUTTONS
+==========================================*/
+
+.competition-prev,
+.competition-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 58px;
+  height: 58px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+
+  font-size: 30px;
+  transition: 0.3s;
+
+  z-index: 10;
+}
+
+.competition-prev:hover,
+.competition-next:hover {
+  background: #d4af37;
+}
+
+.competition-prev {
+  left: 25px;
+}
+
+.competition-next {
+  right: 25px;
+}
+
+/*==========================================
+DOTS
+==========================================*/
+
+.competition-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 10px;
+
+  z-index: 20;
+}
+
+.competition-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.45);
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.competition-dot:hover {
+  transform: scale(1.2);
+}
+
+.competition-dot.competition-active {
+  background: #d4af37;
+  transform: scale(1.3);
+}
+
+/*==========================================
+RESPONSIVE
+==========================================*/
+
+@media (max-width: 992px) {
+  .competition-slider {
+    height: 500px;
+  }
+
+  .competition-slide-content {
+    padding: 35px;
+  }
+
+  .competition-slide-content h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .competition-slider {
+    height: 380px;
+    border-radius: 15px;
+  }
+
+  .competition-slide-content {
+    padding: 25px;
+  }
+
+  .competition-slide-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .competition-slide-content p {
+    font-size: 0.9rem;
+  }
+
+  .competition-prev,
+  .competition-next {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  .competition-prev {
+    left: 12px;
+  }
+
+  .competition-next {
+    right: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .competition-slider {
+    height: 300px;
+  }
+
+  .competition-slide-content {
+    padding: 20px;
+  }
+
+  .competition-slide-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .competition-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
 
 /* =========================
-   SPEAKERS SECTION
+   SPEAKERS SECTION (UPDATED LANDSCAPE FIX)
 ========================= */
 
 .speakers-section {
   background: #f3ede3;
 }
+
 .speaker-card {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
   height: 100%;
 }
 
 .speaker-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.15);
 }
 
+/* 🔥 THIS IS THE KEY FIX */
 .speaker-card img {
   width: 100%;
-  height: 320px;
-  object-fit: cover;
-  object-position: top;
+  height: 210px;          /* keep consistent card height */
+  object-fit: cover;      /* keeps premium look */
+  object-position: center 20%;  /* 🔥 KEY FIX: prevents top-head cropping */
+  display: block;
 }
 
+/* optional: if you want slightly taller cinematic look */
+/*
+.speaker-card img {
+  aspect-ratio: 3 / 2;
+}
+*/
 .speaker-info {
-  padding: 15px;
+  padding: 18px;
+  text-align: center;   /* 🔥 centers everything */
 }
 
-.speaker-info h5,
-.speaker-info small,
-.speaker-info p {
-  color: #222 !important;
+.speaker-info h5 {
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-align: center;
 }
 
 .speaker-info small {
-  color: #0b5d3b !important;
   display: block;
+  color: #0b5d3b !important;
+  font-weight: 600;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .speaker-info p {
   font-size: 14px;
   line-height: 1.5;
+  color: #444;
+  text-align: center;
 }
-
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .speaker-card img {
+    aspect-ratio: 16 / 9;
+  }
+}
 
 /* =========================
    SPONSORS SECTION BACKGROUND
@@ -825,18 +1099,155 @@ background:#fff;
   color: #ccc;
 }
 
-/* RESPONSIVENESS */
-@media (max-width: 1200px) {
+/* =========================================
+   SPONSORS SECTION BACKGROUND
+   ========================================= */
 
-  .hero-content {
-    max-width: 600px;
+.sponsors-section {
+  background: linear-gradient(135deg, #0b2e1a, #0f3d22);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* soft gold glow overlay */
+.sponsors-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(212,175,55,0.08), transparent 60%);
+  pointer-events: none;
+}
+
+/* title */
+.sponsors-section h2 {
+  font-weight: 700;
+}
+
+/* subtitle */
+.sponsor-subtext {
+  color: #d6d6d6;
+  max-width: 750px;
+  margin: 10px auto 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* CTA */
+.sponsor-cta {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 11px 20px;
+
+  background: linear-gradient(135deg, #d4af37, #f5d97c);
+  color: #111;
+  font-weight: 600;
+
+  border-radius: 30px;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.sponsor-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+}
+
+/* =========================================
+   BASE SPONSOR CARD
+   ========================================= */
+
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 28px 20px;
+  border-radius: 16px;
+
+  text-decoration: none;
+  color: #fff;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(6px);
+  transition: all 0.35s ease;
+
+  height: 100%;
+}
+
+/* logo */
+.sponsor-card img {
+  width: 130px;
+  height: 85px;
+  object-fit: contain;
+
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+}
+
+/* text */
+.sponsor-card h6 {
+  margin: 0;
+  font-weight: 600;
+  color: #eaeaea;
+  transition: 0.3s ease;
+}
+
+/* hover lift */
+.sponsor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.35);
+}
+
+/* =========================================
+   ZANACO BRAND STYLE (GOLD)
+   ========================================= */
+
+.sponsor-card.zanaco:hover {
+  border-color: #d4af37;
+  background: rgba(212,175,55,0.10);
+}
+
+.sponsor-card.zanaco:hover h6 {
+  color: #d4af37;
+}
+
+.sponsor-card.zanaco:hover img {
+  filter: drop-shadow(0 0 12px rgba(212,175,55,0.5));
+}
+
+/* =========================================
+   UNDP BRAND STYLE (BLUE)
+   ========================================= */
+
+.sponsor-card.undp:hover {
+  border-color: #2b6cb0;
+  background: rgba(43,108,176,0.10);
+}
+
+.sponsor-card.undp:hover h6 {
+  color: #63b3ed;
+}
+
+.sponsor-card.undp:hover img {
+  filter: drop-shadow(0 0 12px rgba(99,179,237,0.5));
+}
+
+/* =========================================
+   RESPONSIVE FIXES
+   ========================================= */
+
+@media (max-width: 768px) {
+  .sponsor-card {
+    padding: 22px;
   }
 
-  .speaker-card img {
-    height: 280px;
-  }
-
-  .beauty-card img {
-    height: 240px;
+  .sponsor-card img {
+    width: 110px;
+    height: 75px;
   }
 }

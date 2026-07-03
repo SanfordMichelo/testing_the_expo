@@ -176,6 +176,9 @@
   gap: 24px;
   justify-content: center;
 }
+.booth-grid-2 .booth-card {
+  width: 320px;
+}
 .booth-card {
   position: relative;
   background: #fff;
@@ -216,9 +219,6 @@
 .booth-swatch-premium {
   background: linear-gradient(135deg, var(--exh-gold), var(--exh-gold-bright));
 }
-.booth-swatch-corner {
-  background: linear-gradient(135deg, var(--exh-brown), var(--exh-brown-deep));
-}
 .booth-card h3 {
   font-family: "Folklore", serif;
   text-transform: uppercase;
@@ -254,49 +254,14 @@
   opacity: 0.6;
   margin-bottom: 16px;
 }
-.floor-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(4, 46px);
-  gap: 6px;
-  max-width: 520px;
+.floor-plan-img {
+  max-width: 100%;
+  width: 100%;
+  max-width: 900px;
   margin: 0 auto;
-}
-.floor-cell {
-  border-radius: 6px;
-}
-.floor-standard {
-  background: rgba(12, 119, 41, 0.22);
-}
-.floor-premium {
-  background: rgba(230, 168, 23, 0.45);
-}
-.floor-corner {
-  background: rgba(107, 68, 35, 0.4);
-}
-.floor-legend {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-  margin-top: 18px;
-  font-size: 0.85rem;
-  color: #444;
-}
-.floor-dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin-right: 6px;
-}
-.floor-dot-standard {
-  background: var(--exh-green);
-}
-.floor-dot-premium {
-  background: var(--exh-gold);
-}
-.floor-dot-corner {
-  background: var(--exh-brown);
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
 }
 
 /* ===================== APPLICATION FORM ===================== */
@@ -309,49 +274,30 @@
   color: var(--exh-gold-bright);
   text-align: center;
 }
-.exh-form-section > .container > p {
-  text-align: center;
-  opacity: 0.85;
-  margin-bottom: 32px;
-}
-#exhibitor-form {
-  max-width: 700px;
+.exh-redirect-card {
+  max-width: 560px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.05);
-  padding: 32px;
+  padding: 44px 36px;
   border-radius: 12px;
   border: 1px solid rgba(255, 204, 0, 0.25);
+  text-align: center;
 }
-#exhibitor-form label {
-  color: #f0f0f0;
+.exh-redirect-card h2 {
+  margin-bottom: 12px;
 }
-.exh-power-check {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.exh-redirect-card p {
+  opacity: 0.85;
+  margin-bottom: 22px;
 }
-.exh-power-check .form-check {
-  margin-top: 4px;
+.exh-redirect-btn {
+  display: inline-block;
 }
-#exhibitor-form .btn {
-  background-color: var(--exh-gold);
-  border-color: var(--exh-gold);
-  color: #1b1b1b;
-  font-weight: 600;
-}
-#exhibitor-form .btn:hover {
-  background-color: var(--exh-gold-bright);
-  border-color: var(--exh-gold-bright);
-}
-.form-feedback {
-  margin-top: 14px;
-  font-weight: 500;
-}
-.form-feedback.success {
-  color: #7cffb2;
-}
-.form-feedback.error {
-  color: #ff8a8a;
+.exh-redirect-note {
+  margin: 14px 0 0;
+  font-size: 0.78rem;
+  opacity: 0.6;
+  font-style: italic;
 }
 
 /* ===================== FOOTER STUB ===================== */
@@ -390,8 +336,5 @@
   }
   .booth-card {
     width: 100%;
-  }
-  .floor-grid {
-    grid-template-rows: repeat(4, 34px);
   }
 }

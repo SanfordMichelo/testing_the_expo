@@ -1,12 +1,23 @@
+:root {
+  --comp-green-deep: #102a1c;
+  --comp-green: #0c7729;
+  --comp-green-bright: #2d9e4f;
+  --comp-gold: #e6a817;
+  --comp-gold-bright: #ffcc00;
+  --comp-brown: #6b4423;
+  --comp-brown-deep: #4a2f17;
+  --comp-cream: #f8f4ec;
+  --comp-red: #c14444;
+}
 .expo-about-page {
   color: #1d1d1d;
 }
 
 /* HERO SECTION */
 .expo-about-hero {
-  background-color: rgb(12, 90, 12);
-  background: linear-gradient(135deg, #1b4332, #147a50);
-  color: white;
+  background-color: var(--comp-green-deep);
+   background: var(--comp-green-deep);
+   color: white;
   padding: 70px 0 60px;
   text-align: center;
 }
@@ -124,4 +135,20 @@
 
 .expo-about-cta {
   background-color: #f8f5ef;
+}
+.button
+{
+  background: var(--comp-green-deep);
+
+}
+.expo-about-btn {
+  background: var(--comp-green-deep);
+  border-color: var(--comp-green-deep);
+  color: #fff;
+}
+
+.expo-about-btn:hover {
+  background: #0a5c43; /* optional darker shade */
+  border-color: #0a5c43;
+  color: #fff;
 }

@@ -44,11 +44,7 @@
 /* ---------- Hero ---------- */
 .sponsor-hero {
   position: relative;
-  background-image: linear-gradient(
-      rgba(16, 42, 28, 0.88),
-      rgba(16, 42, 28, 0.82)
-    ),
-    url(../assets/emerald-flower.jpg);
+  background-image: linear-gradient(rgba(16, 42, 28, 0.88), rgba(16, 42, 28, 0.82)), url(../assets/emerald-flower.jpg);
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -212,7 +208,7 @@
   background: linear-gradient(135deg, var(--sp-gold), var(--sp-gold-bright));
 }
 .tier-emerald .swatch {
-  background: linear-gradient(135deg, var(--sp-green), var(--sp-green-bright));
+  background: linear-gradient(135deg, #dfdfdf, #a4a4a4);
 }
 .tier-bronze .swatch {
   background: linear-gradient(135deg, var(--sp-brown), var(--sp-brown-deep));
