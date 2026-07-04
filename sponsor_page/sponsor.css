@@ -44,7 +44,7 @@
 /* ---------- Hero ---------- */
 .sponsor-hero {
   position: relative;
-  background-image: linear-gradient(rgba(16, 42, 28, 0.88), rgba(16, 42, 28, 0.82)), url(../assets/emerald-flower.jpg);
+  background-image: linear-gradient(rgba(16, 42, 28, 0.88), rgba(16, 42, 28, 0.82)), url(../images/emerald-flower.jpg);
   background-size: cover;
   background-position: center;
   color: #fff;

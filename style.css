@@ -1,8 +1,32 @@
+  body {
+   background: #fff;
+   color: #000;
+   font-family: Arial, sans-serif;
+ }
  /* Logo */
 .navbar-logo {
   height: 60px; /* Adjust if needed */
   width: auto;
   display: block;
+
+  border-radius:15px;
+
+  object-fit: contain; /* prevents stretching */
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* optional nice hover effect */
+.navbar-brand:hover .navbar-logo {
+  transform: scale(1.05);
+}
+
+/* mobile responsiveness */
+@media (max-width: 576px) {
+  .navbar-logo {
+    height: 45px;
+    border-radius: 14px;
+  }
 }
 
 /* Navbar brand */
@@ -98,11 +122,7 @@
    left: 130%;
  }
 
- body {
-   background: #0b0b0b;
-   color: white;
-   font-family: Arial, sans-serif;
- }
+
 
  /* NAV */
  .navbar {
@@ -131,7 +151,7 @@
       rgba(0, 0, 0, 0.30) 60%,
       rgba(0, 0, 0, 0.05) 100%
     ), 
-    url("images/background.webp");
+    url("images/background_image.webp");
 
   background-size: cover;
  
@@ -230,6 +250,7 @@
 
 .hero-description {
   width: min(400px, 100%);
+  max-width: 400px;
 
   margin-bottom: 2rem;
 
@@ -237,6 +258,27 @@
 
   font-size: 1rem;
   line-height: 1.8;
+  font-weight: 700;
+
+  text-align: left;
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+
+  /* makes line breaks feel more balanced */
+  hyphens: auto;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+
+/* Slightly better spacing control on very small screens */
+@media (max-width: 576px) {
+  .hero-description {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
 }
 .hero-btn {
   display: inline-block;
@@ -390,7 +432,7 @@
         rgba(0, 0, 0, 0.82) 0%,
         rgba(0, 0, 0, 0.55) 100%
       ),
-      url("images/smaller_screens.webp");
+      url("images/smaller_background.webp");
 
     background-size: cover;
     background-position: center top;
@@ -990,7 +1032,21 @@ RESPONSIVE
  background: linear-gradient(135deg,  #144d35, #1b4332);
   color: #fff;
 }
+.sponsor-subtext {
+  font-weight: 700;
+  color: #fff;
+}
+.sponsor-current-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
 
+@media (max-width: 576px) {
+  .sponsor-current-title {
+    font-size: 1.3rem;
+  }
+}
 /* subtitle */
 .sponsor-subtext {
   color: rgba(255,255,255,0.85);
