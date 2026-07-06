@@ -6,8 +6,7 @@
    file is opened directly or served from a local server.
 ========================================================= */
 
-// ---- Configuration the organising team can adjust ----
-var ENTRY_DEADLINE = new Date("2026-07-01T23:59:59");
+
 
 // One row per competition category. "taken" / "total" drive the
 // per-category slot count shown on the page.
@@ -15,13 +14,13 @@ var ENTRY_DEADLINE = new Date("2026-07-01T23:59:59");
 // counts shared on WhatsApp — the 4 rows marked "TBC" below are
 // placeholders standing in until that list is confirmed.
 var CATEGORIES = [
-  { name: "Bridal Makeup", taken: 5, total: 15 },
-  { name: "Editorial Makeup", taken: 3, total: 15 },
-  { name: "Nail Tech", taken: 2, total: 15 },
-  { name: "Barbering", taken: 3, total: 15 },
-  { name: "Wig Installation", taken: 0, total: 15 },
-  { name: "Eyebrows", taken: 0, total: 15 },
-  { name: "Hair Braiding", taken: 0, total: 15 },
+  { name: "Bridal Makeup", taken: 0, total: 5 },
+  { name: "Editorial Makeup", taken: 0, total: 5 },
+  { name: "Nail Tech", taken: 0, total: 5 },
+  { name: "Barbering", taken: 0, total: 5 },
+  { name: "Wig Installation", taken: 0, total: 5 },
+  { name: "Eyebrows", taken: 0, total: 5 },
+  { name: "Hair Braiding", taken: 0, total: 5 },
 ];
 
 document.addEventListener("DOMContentLoaded", function () {

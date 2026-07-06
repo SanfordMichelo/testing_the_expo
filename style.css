@@ -128,13 +128,43 @@
  .navbar {
    background: #000;
  }
+.register-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
 
+/* =========================
+   ZAMBIA FLAG (GIF)
+   ========================= */
+.zambia-flag {
+  width: 70px;          /* 👈 bigger (you can go 28–40px) */
+  height: auto;
+
+  display: inline-block;
+  vertical-align: middle;
+
+  /* makes it feel more “designed” */
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+
+  /* smooth feel */
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* hover polish */
+.register-wrapper:hover .zambia-flag {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 6px rgba(0, 255, 0, 0.35));
+}
 
  /* ==========================================
    HERO SECTION
 ========================================== */
 
 .hero {
+  
   position: relative;
   min-height: 50vh;
 
@@ -151,7 +181,7 @@
       rgba(0, 0, 0, 0.30) 60%,
       rgba(0, 0, 0, 0.05) 100%
     ), 
-    url("images/background_image.webp");
+    url("images/laptops_tablets.webp");
 
   background-size: cover;
  
@@ -390,6 +420,106 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
+/* ==========================================
+   HERO SPONSORS SECTION
+========================================== */
+
+.hero-sponsors {
+  margin-top: 28px;
+  text-align: center;
+}
+
+/* title */
+.hero-sponsors-title {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+/* row: SINGLE LINE ON DESKTOP */
+.hero-sponsors-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 22px;
+}
+
+/* sponsor card */
+.hero-sponsor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 16px;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+
+  transition: all 0.3s ease;
+}
+
+/* logo size (BIGGER) */
+.hero-sponsor img {
+  height: 52px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+/* hover */
+.hero-sponsor:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.14);
+}
+/* ==========================================
+   HERO SPONSOR BRAND HOVER COLORS
+========================================== */
+
+.hero-sponsor.zanaco:hover {
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.5); /* Gold */
+}
+
+.hero-sponsor.undp:hover {
+  box-shadow: 0 0 18px rgba(99, 179, 237, 0.5); /* UNDP Blue */
+}
+
+.hero-sponsor.zcas:hover {
+  box-shadow: 0 0 18px rgba(159, 122, 234, 0.5); /* Purple */
+}
+
+.hero-sponsor.mooyas:hover {
+  box-shadow: 0 0 18px rgba(236, 72, 153, 0.5); /* Elegant Pink */
+}
+
+.hero-sponsor.bidata:hover {
+  box-shadow: 0 0 18px rgba(22, 163, 74, 0.5); /* Professional Green */
+}/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-sponsors-row {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-sponsor img {
+    height: 38px;
+  }
+
+  .hero-sponsors-title {
+    font-size: 0.85rem;
+  }
+}
+
+.hero-heading,
+.countdown-card,
+.hero-sponsors {
+  margin-left: 28px;
+}
 /* ==========================================
    TABLETS
 ========================================== */
@@ -397,7 +527,21 @@
 @media (max-width: 992px) {
 
   .hero {
-    background-position: center center;
+    min-height: auto;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.82) 0%,
+        rgba(0, 0, 0, 0.55) 100%
+      ),
+      url("images/laptops_tablets.webp");
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    padding: 90px 0 50px;
   }
 
   .hero-content {
@@ -416,30 +560,32 @@
     width: min(340px, 100%);
   }
 }
-
 /* ==========================================
    MOBILE
 ========================================== */
+@media (max-width: 600px) {
 
-@media (max-width: 768px) {
-
-   .hero {
+  .hero {
     min-height: auto;
 
-   background:
-  linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.50) 0%,
-    rgba(0, 0, 0, 0.25) 100%
-  ),
-  url("images/smaller_background.webp");
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.15) 45%,
+        rgba(0, 0, 0, 0.35) 100%
+      ),
+      url("images/phones_background.webp");
 
     background-size: cover;
-    background-position: center top;
+    background-position: center top; /* adjust once you post/share this image too */
     background-repeat: no-repeat;
 
     padding: 90px 0 50px;
   }
+
+  /* ... rest unchanged ... */
+}
 
   .hero-content {
     padding: 0;
@@ -484,7 +630,9 @@
     max-width: 260px;
   }
 }
-
+.hero-outline {
+    color: #016808; /* Beautiful green */
+}
 /* ==========================================
    SMALL PHONES
 ========================================== */
@@ -1025,285 +1173,389 @@ RESPONSIVE
   }
 }
 
-/* =========================
-   SPONSORS SECTION BACKGROUND
-========================= */
+/* =====================================================
+   SPONSORS SECTION (PROFESSIONAL CLEAN VERSION)
+===================================================== */
+
 #sponsors {
- background: linear-gradient(135deg,  #144d35, #1b4332);
-  color: #fff;
-}
-.sponsor-subtext {
-  font-weight: 700;
-  color: #fff;
-}
-.sponsor-current-title {
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.6rem;
-}
-
-@media (max-width: 576px) {
-  .sponsor-current-title {
-    font-size: 1.3rem;
-  }
-}
-/* subtitle */
-.sponsor-subtext {
-  color: rgba(255,255,255,0.85);
-  max-width: 700px;
-  margin: 0 auto 20px;
-}
-
-/* CTA BUTTON */
-.sponsor-cta {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #fff;
-  color: #0b5d3b;
-  font-weight: 600;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.sponsor-cta:hover {
-  background: #e6f5ee;
-}
-
-/* =========================
-   MARQUEE
-========================= */
-.sponsor-marquee {
+    background: #f7f9fc; /* ❌ removed green, now clean event background */
+    color: #111;
+    padding: 90px 0;
+    position: relative;
     overflow: hidden;
-    padding: 40px 0;
 }
 
-.sponsor-track {
-  display: flex;
-  gap: 25px;
-  width: max-content;
-  animation: scrollLeft 25s linear infinite;
+/* subtle soft background glow */
+#sponsors::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(0,0,0,0.04), transparent 60%);
+    pointer-events: none;
 }
 
-/* =========================
-   SPONSOR CARD (CLICKABLE)
-========================= */
-.sponsor-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 15px;
-  width: 220px;
-  flex: 0 0 auto;
+/* =====================================================
+   HEADINGS
+===================================================== */
 
-  text-decoration: none;
-  color: #222;
+#sponsors h2 {
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: #111;
+    margin-bottom: 15px;
+}
 
+.sponsor-subtext {
+    max-width: 760px;
+    margin: 0 auto 30px;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.sponsor-current-title {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    color: #111;
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
+.expo-sponsor-cta-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    margin:18px 0 50px;
+    padding:15px 34px;
+
+    background:linear-gradient(135deg,#1b4332,#2d6a4f);
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:.5px;
+
+    border-radius:50px;
+    border:2px solid #d4af37;
+
+    box-shadow:0 12px 30px rgba(27,67,50,.18);
+
+    transition:all .35s ease;
+}
+
+.expo-sponsor-cta-btn:hover{
+    background:linear-gradient(135deg,#2d6a4f,#40916c);
+    color:#fff;
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(27,67,50,.25),
+        0 0 18px rgba(212,175,55,.35);
+}
+
+.expo-sponsor-cta-btn::after{
+    content:"→";
+    font-size:1.2rem;
+    transition:transform .3s ease;
+}
+
+.expo-sponsor-cta-btn:hover::after{
+    transform:translateX(6px);
+}
+
+/* ============================================
+   SPONSORSHIP PACKAGE CARDS
+   ============================================ */
+
+.package-card {
+  position: relative;
+  height: 100%;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  overflow: hidden; /* important */
-
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
 }
 
-
-.sponsor-card img {
-  width: 100%;
-  height: 70px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-.sponsor-card h6 {
-  font-weight: 700;
-  margin-top: 10px;
-  margin-bottom: 0;
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
 }
 
-.sponsor-card:hover {
-  transform: scale(1.18);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
-}
-
-
-
-/* =========================
-   ANIMATION
-========================= */
-@keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* =========================
-   CTA SECTION
-========================= */
-#register {
-  background: #111;
-}
-
-#register h2 {
-  font-weight: 700;
-}
-
-#register p {
-  color: #ccc;
-}
-
-/* =========================================
-   SPONSORS SECTION BACKGROUND
-   ========================================= */
-
-.sponsors-section {
-  background: linear-gradient(135deg, #0b2e1a, #0f3d22);
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-}
-
-/* soft gold glow overlay */
-.sponsors-section::before {
+/* subtle top sheen shared by all cards */
+.package-card::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top, rgba(212,175,55,0.08), transparent 60%);
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+  opacity: 0.7;
 }
 
-/* title */
-.sponsors-section h2 {
+/* ---------- PLATINUM ---------- */
+.package-card.platinum {
+  background: linear-gradient(160deg, #3d4451 0%, #22262e 100%);
+  border: 1px solid rgba(229, 228, 226, 0.3);
+  color: #f0f1f3;
+}
+
+.package-card.platinum.featured {
+  border-color: rgba(229, 228, 226, 0.6);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 0 45px rgba(200, 210, 225, 0.18);
+}
+
+.package-card.platinum.featured:hover {
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.4),
+    0 0 65px rgba(200, 210, 225, 0.28);
+}
+
+/* ---------- GOLD ---------- */
+.package-card.gold {
+  background: linear-gradient(160deg, #684807 0%, #d19c29 100%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #fdf3d8;
+}
+
+.package-card.gold:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+/* ---------- SILVER ---------- */
+.package-card.silver {
+  background: linear-gradient(160deg, #010c22 0%, #5175e2 100%);
+  border: 1px solid rgba(140, 140, 242, 0.3);
+  color: #f2f2f4;
+}
+
+.package-card.silver:hover {
+  border-color: rgba(192, 192, 200, 0.55);
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.package-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.package-label {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.35rem;
   font-weight: 700;
+  letter-spacing: 0.03em;
+  color: inherit;
 }
 
-/* subtitle */
-.sponsor-subtext {
-  color: #d6d6d6;
-  max-width: 750px;
-  margin: 10px auto 20px;
+.package-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #d4af37, #f4d976);
+  color: #2a1f00;
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.5);
+}
+
+/* ============================================
+   PRICE
+   ============================================ */
+
+.package-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.currency {
   font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* CTA */
-.sponsor-cta {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 11px 20px;
-
-  background: linear-gradient(135deg, #d4af37, #f5d97c);
-  color: #111;
   font-weight: 600;
-
-  border-radius: 30px;
-  text-decoration: none;
-
-  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.05em;
 }
 
-.sponsor-cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+.amount {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
 }
 
-/* =========================================
-   BASE SPONSOR CARD
-   ========================================= */
+/* ============================================
+   DESCRIPTION
+   ============================================ */
 
-.sponsor-card {
+.package-description {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.75rem;
+}
+
+/* ============================================
+   FEATURES
+   ============================================ */
+
+.package-features {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 28px 20px;
-  border-radius: 16px;
-
-  text-decoration: none;
-  color: #fff;
-
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-
-  backdrop-filter: blur(6px);
-  transition: all 0.35s ease;
-
-  height: 100%;
+  gap: 0.9rem;
+  margin-top: auto;
 }
 
-/* logo */
-.sponsor-card img {
-  width: 130px;
-  height: 85px;
-  object-fit: contain;
-
-  margin-bottom: 12px;
-  transition: 0.3s ease;
+.feature {
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.92);
+  padding-left: 0.1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
-/* text */
-.sponsor-card h6 {
-  margin: 0;
-  font-weight: 600;
-  color: #eaeaea;
-  transition: 0.3s ease;
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 767px) {
+  .package-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .amount {
+    font-size: 1.6rem;
+  }
+}
+/* =====================================================
+   SPONSOR CARDS (CLEANED BUT SAME DESIGN)
+===================================================== */
+
+.sponsor-card {
+    background: #fff;
+    width: 220px;
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 18px;
+    padding: 24px 20px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #222;
+
+    border: 1px solid rgba(0,0,0,0.06);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    transition: all 0.3s ease;
 }
 
-/* hover lift */
 .sponsor-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.35);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
-/* =========================================
-   ZANACO BRAND STYLE (GOLD)
-   ========================================= */
-
-.sponsor-card.zanaco:hover {
-  border-color: #d4af37;
-  background: rgba(212,175,55,0.10);
+.sponsor-card img {
+    width: 130px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 14px;
 }
 
-.sponsor-card.zanaco:hover h6 {
-  color: #d4af37;
+.sponsor-card h6 {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #222;
+
+
 }
 
-.sponsor-card.zanaco:hover img {
-  filter: drop-shadow(0 0 12px rgba(212,175,55,0.5));
+#sponsors h2,
+.sponsor-current-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #1b4332; /* same green as expo */
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
 }
 
-/* =========================================
-   UNDP BRAND STYLE (BLUE)
-   ========================================= */
-
-.sponsor-card.undp:hover {
-  border-color: #2b6cb0;
-  background: rgba(43,108,176,0.10);
+/* underline (same style as expo-title) */
+#sponsors h2::after,
+.sponsor-current-title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 50px;
+  background: linear-gradient(
+    to right,
+    #1b4332,
+    #d4af37,
+    #5a3e1b
+  );
 }
+/* =====================================================
+   BRAND HOVER STATES (SUBTLE + CLEAN)
+===================================================== */
 
-.sponsor-card.undp:hover h6 {
-  color: #63b3ed;
-}
+.sponsor-card.zanaco:hover { border-color: #d4af37; }
+.sponsor-card.undp:hover { border-color: #2b6cb0; }
+.sponsor-card.zcas:hover { border-color: #6b46c1; }
+.sponsor-card.mooya:hover { border-color: #ff5fa2; }
+.sponsor-card.bidata:hover { border-color: #1f5fa8; }
 
-.sponsor-card.undp:hover img {
-  filter: drop-shadow(0 0 12px rgba(99,179,237,0.5));
-}
-
-/* =========================================
-   RESPONSIVE FIXES
-   ========================================= */
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
 @media (max-width: 768px) {
-  .sponsor-card {
-    padding: 22px;
-  }
+    #sponsors {
+        padding: 60px 0;
+    }
 
-  .sponsor-card img {
-    width: 110px;
-    height: 75px;
-  }
+    #sponsors h2 {
+        font-size: 2rem;
+    }
+
+    .package-card {
+        padding: 22px;
+    }
+
+    .sponsor-card {
+        width: 180px;
+        min-height: 160px;
+        padding: 20px;
+    }
 }
