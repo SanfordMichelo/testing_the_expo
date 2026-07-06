@@ -270,7 +270,7 @@
 .hero-outline {
   display: block;
 
-color: rgb(7, 148, 7);
+  color: rgb(7, 148, 7);
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
 }
 
