@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Cosmetology Expo Zambia 2026</title>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,7 +18,7 @@
     />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../footer.css" />
-    <link rel="stylesheet" href="competition.css" />
+    <link rel="stylesheet" href="about.css" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -84,6 +83,7 @@
               <a class="nav-link" href="../index.html#contact">CONTACT</a>
             </li>
           </ul>
+
           <!-- REGISTER + FLAG -->
           <a
             href="../register_page/register.html"
@@ -102,120 +102,79 @@
       </div>
     </nav>
     <!-- END HEADER -->
-
-    <main class="comp-page">
-      <!-- ===================== HERO ===================== -->
-      <section class="comp-hero">
-        <div class="comp-spotlight" aria-hidden="true"></div>
+    <main class="expo-about-page">
+      <!-- Hero -->
+      <section class="expo-about-hero">
         <div class="container">
-          <p class="comp-eyebrow">
-            TEVETA-REGISTERED COSMETOLOGY TRAINING INSTITUTIONS
+          <p class="expo-about-eyebrow">GLOW & GROW SUSTAINABLY</p>
+          <h1 class="expo-about-title">About Cosmetology Expo</h1>
+          <p class="expo-about-hero-text">
+            Zambia's premier exhibition and conference for the beauty, hair,
+            nail, skin and makeup industry bringing together exhibitors,
+            competitors, sponsors and beauty lovers under one roof.
           </p>
-          <h1>Step Into The Spotlight</h1>
-          <p class="comp-hero-kicker">
-            Inaugural Cosmetology EXPO and MSME Finance Fair Zambia 2026
-          </p>
-          <p class="comp-hero-text">
-            The Cosmetology Expo Training Institutions' Competition gives
-            students, hairdressers, nail technicians, skincare and make-up
-            artists a stage in front of industry judges, exhibitors and the
-            public. Bring your students. Show your training. Take the trophy
-            home.
-          </p>
-          <div class="comp-hero-actions">
-            <a href="#comp-slots" class="btn btn-lg comp-btn-gold"
-              >Check Slot Availability</a
-            >
-            <a href="#comp-entry-form" class="btn btn-lg comp-btn-outline"
-              >Enter Your Institution</a
-            >
-          </div>
-          <p class="comp-deadline" id="comp-deadline-text">
-            <!-- filled in by competition.js -->
+        </div>
+      </section>
+      <section class="expo-about-story">
+        <div class="container">
+          <p class="expo-about-text">
+            The Inaugural cosmetology expo and MSME finance fair 2026 hosted by
+            the Ministry of Small and Medium enterprise Development will be a
+            leading platform for beauty , skincare hair , innovation and
+            wellness entrepreneurship. It will bring together professionals,
+            training institutions , brands and innovators shaping the future of
+            the beauty industry in Zambia
           </p>
         </div>
       </section>
 
-      <!-- ===================== ELIGIBILITY ===================== -->
-      <section class="comp-eligibility">
+      <section class="expo-about-highlights">
         <div class="container">
-          <div class="elig-grid">
-            <div class="elig-copy">
-              <p class="comp-eyebrow comp-eyebrow-dark">WHO CAN ENTER</p>
-              <h2>Built For TEVETA Training Institutions</h2>
-              <p>
-                This competition is reserved for technical institutions
-                registered with the Technical Education, Vocational and
-                Entrepreneurship Training Authority (TEVETA) that run accredited
-                cosmetology programmes. If that's your training institution, we
-                want you on this stage.
+          <h2 class="expo-about-section-title">What to Expect</h2>
+
+          <div class="expo-highlight-grid">
+            <div class="expo-highlight-card">
+              <h3 class="expo-highlight-title">Exhibitions</h3>
+              <p class="expo-highlight-text">
+                Discover brands products and services from across the beauty
+                hair nail and skincare industry.
               </p>
             </div>
-            <ul class="elig-list">
-              <li>
-                <span class="elig-mark">&#10003;</span>
-                Your institution holds a current TEVETA registration.
-              </li>
-              <li>
-                <span class="elig-mark">&#10003;</span>
-                You offer an accredited course in Hairdressing, Nail Technology,
-                Skincare/Esthetics or Make-up Artistry.
-              </li>
 
-              <li>
-                <span class="elig-mark">&#10003;</span>
-                Entries are accepted until slots fill or the closing date is
-                reached — whichever comes first.
-              </li>
-            </ul>
+            <div class="expo-highlight-card">
+              <h3 class="expo-highlight-title">Competitions</h3>
+              <p class="expo-highlight-text">
+                Watch top stylists and beauty professionals compete and showcase
+                their craft live.
+              </p>
+            </div>
+
+            <div class="expo-highlight-card">
+              <h3 class="expo-highlight-title">Conference</h3>
+              <p class="expo-highlight-text">
+                Learn from industry leaders through talks and sessions focused
+                on growing sustainably.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ===================== CATEGORIES + SLOTS ===================== -->
-      <!-- Vertical list, one row per category, each with its own live
-           slot count. Edit the CATEGORIES array in competition.js to
-           rename a category or update its taken/total slot numbers —
-           TODO (team): swap in the real 8-category list + slot counts
-           shared on WhatsApp; 4 placeholder rows are marked below. -->
-      <section class="comp-categories" id="comp-slots">
+      <section class="expo-about-cta">
         <div class="container">
-          <p class="comp-eyebrow comp-eyebrow-dark">ENTRY SLOTS</p>
-          <h2 class="text-center">Competition Categories</h2>
-          <p class="categories-intro">
-            All 8 categories at a glance. Judging criteria for each are in the
-            official rules pack shared with confirmed entrants.
+          <h2 class="expo-about-section-title">Be Part of It</h2>
+
+          <p class="expo-about-text">
+            Join us this July as we glow and grow together. Register now or
+            reach out about sponsoring the Expo.
           </p>
 
-          <ul class="cat-list" id="cat-list">
-            <!-- filled in by competition.js from the CATEGORIES array -->
-          </ul>
-        </div>
-      </section>
-      <!-- ===================== ENTER THE COMPETITION ===================== -->
-      <!-- The old in-page entry form has been retired — entries are
-           collected through the Ministry's official Google Form so
-           there's a single source of truth. This card just guides
-           people there. -->
-      <section class="comp-form-section" id="comp-entry-form">
-        <div class="container">
-          <div class="comp-cta-card">
-            <p class="comp-eyebrow comp-eyebrow-dark">ENTER THE COMPETITION</p>
-            <h2>Ready To Take The Stage?</h2>
-            <p>
-              Entries are submitted through our official Training Institution
-              Entry Form. Have your TEVETA registration number, contact details
-              and category choices ready before you start.
-            </p>
-            <a
-              class="btn comp-btn-gold"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdkL-jr6vG6vHVJlCsASfrq0vxOYXP0_j4Q425pXqoFBqr3Bw/viewform?usp=publish-editor"
-              target="_blank"
-              rel="noopener"
-            >
-              Open The Entry Form
-            </a>
-          </div>
+          <a
+            href="../register_page/register.html"
+            class="btn btn-success expo-about-btn"
+          >
+            REGISTER NOW
+          </a>
         </div>
       </section>
     </main>
@@ -288,7 +247,6 @@
       </div>
     </footer>
 
-    <script src="competition.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
