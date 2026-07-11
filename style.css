@@ -166,7 +166,7 @@
 .hero {
   
   position: relative;
-  min-height: 140vh;
+  min-height: 145vh;
 
   display: flex;
   align-items: center;
@@ -448,58 +448,173 @@
   flex-wrap: nowrap;
   gap: 22px;
 }
+/*====================================
+ HERO SPONSORS
+=====================================*/
 
-/* sponsor card */
+.hero-sponsors {
+  margin-top: 50px;
+}
+
+.hero-sponsors-title {
+  text-align: center;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  opacity: 0.9;
+}
+
+/* Slider */
+
+.hero-sponsors-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 3%,
+    black 97%,
+    transparent
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 3%,
+    black 97%,
+    transparent
+  );
+}
+
+/* Moving Track */
+
+.hero-sponsors-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: sponsorScroll 30s linear infinite;
+}
+
+.hero-sponsors-slider:hover .hero-sponsors-track {
+  animation-play-state: paused;
+}
+
+/* Sponsor Card */
+
 .hero-sponsor {
+  flex: 0 0 auto;
+
+  width: 130px;
+  height: 70px;
+
+  margin: 0 10px;
+  padding: 8px;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 12px 16px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 12px;
 
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(10px);
-
-  transition: all 0.3s ease;
+  transition: all .3s ease;
 }
 
-/* logo size (BIGGER) */
-.hero-sponsor img {
-  height: 52px;
-  width: auto;
-  max-width: 120px;
-  object-fit: contain;
-}
-
-/* hover */
 .hero-sponsor:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.14);
-}
-/* ==========================================
-   HERO SPONSOR BRAND HOVER COLORS
-========================================== */
-
-.hero-sponsor.zanaco:hover {
-  box-shadow: 0 0 18px rgba(212, 175, 55, 0.5); /* Gold */
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.25);
 }
 
-.hero-sponsor.undp:hover {
-  box-shadow: 0 0 18px rgba(99, 179, 237, 0.5); /* UNDP Blue */
+/* Logos */
+
+.hero-sponsor img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  transition: transform .3s ease;
 }
 
-.hero-sponsor.zcas:hover {
-  box-shadow: 0 0 18px rgba(159, 122, 234, 0.5); /* Purple */
+.hero-sponsor:hover img {
+  transform: scale(1.06);
 }
 
-.hero-sponsor.mooyas:hover {
-  box-shadow: 0 0 18px rgba(236, 72, 153, 0.5); /* Elegant Pink */
+/* Infinite Scroll */
+
+@keyframes sponsorScroll {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
 }
 
-.hero-sponsor.bidata:hover {
-  box-shadow: 0 0 18px rgba(22, 163, 74, 0.5); /* Professional Green */
-}/* MOBILE RESPONSIVE */
+.hero-sponsors {
+    margin-top:50px;
+    width:150%;
+    margin-left:auto;
+    overflow:hidden;
+}
+
+@media(max-width:992px){
+    .hero-sponsors{
+        width:120%;
+    }
+}
+
+@media(max-width:768px){
+    .hero-sponsors{
+        width:100%;
+    }
+}
+/* Tablets */
+
+@media (max-width: 992px) {
+
+  .hero-sponsor {
+    width: 110px;
+    height: 60px;
+    margin: 0 8px;
+  }
+
+  .hero-sponsors-track {
+    animation-duration: 24s;
+  }
+
+}
+
+/* Phones */
+
+@media (max-width: 768px) {
+
+  .hero-sponsor {
+    width: 95px;
+    height: 55px;
+    margin: 0 6px;
+  }
+
+  .hero-sponsors-title {
+    font-size: .85rem;
+  }
+
+  .hero-sponsors-track {
+    animation-duration: 20s;
+  }
+
+}
+
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .hero-sponsors-row {
     flex-wrap: wrap;
@@ -873,7 +988,7 @@ COMPETITION SLIDER (FIXED SMOOTH VERSION)
 ==========================================*/
 
 .competition-section {
-  background: #fff;
+  background:  #f3ede3;
   overflow: hidden;
 }
 
@@ -1107,7 +1222,7 @@ RESPONSIVE
 ========================= */
 
 .speakers-section {
-  background: #f3ede3;
+  background: rgb(251, 245, 211);
 }
 
 .speaker-card {
@@ -1178,7 +1293,7 @@ RESPONSIVE
 ===================================================== */
 
 #sponsors {
-    background: #f7f9fc; /* ❌ removed green, now clean event background */
+    background: #f3ede3;
     color: #111;
     padding: 90px 0;
     position: relative;
@@ -1194,6 +1309,7 @@ RESPONSIVE
     pointer-events: none;
 }
 
+
 /* =====================================================
    HEADINGS
 ===================================================== */
@@ -1204,6 +1320,20 @@ RESPONSIVE
     color: #111;
     margin-bottom: 15px;
 }
+.sponsors-title {
+    margin-top: 70px !important;
+    margin-bottom: 40px;
+}
+
+/* Increased spacing before Current Sponsors */
+.sponsor-current-title {
+    margin-top: 120px;   /* increased from 70px */
+    margin-bottom: 40px;
+    color: #111;
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
 
 .sponsor-subtext {
     max-width: 760px;
@@ -1214,13 +1344,138 @@ RESPONSIVE
     font-weight: 500;
 }
 
-.sponsor-current-title {
-    margin-top: 70px;
-    margin-bottom: 30px;
-    color: #111;
-    font-size: 1.7rem;
-    font-weight: 800;
+
+/* =====================================================
+   SPONSOR SLIDER
+===================================================== */
+
+.sponsor-slider {
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
 }
+
+
+.carousel-item {
+    padding: 20px 0;
+}
+
+
+/* Space between sponsor cards */
+.carousel-item .d-flex {
+    gap: 35px;
+}
+
+
+/* =====================================================
+   SPONSOR CARDS
+===================================================== */
+
+.sponsor-card {
+
+    width: 220px;
+    height: 230px;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: #111;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+
+    transition: all .35s ease;
+
+}
+
+
+.sponsor-card img {
+
+    width: 120px;
+    height: 120px;
+
+    object-fit: contain;
+
+    margin-bottom: 18px;
+
+}
+
+
+
+.sponsor-card h6 {
+
+    font-size: .95rem;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    margin: 0;
+    color: #03301d;
+
+}
+
+
+
+/* Hover effect */
+
+.sponsor-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.15);
+
+}
+
+
+/* =====================================================
+   SLIDER BUTTONS
+===================================================== */
+
+
+.carousel-control-prev,
+.carousel-control-next {
+
+    width: 45px;
+    height: 45px;
+
+    background: #1b4332;
+
+    border-radius: 50%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+}
+
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+
+.carousel-control-next {
+    right: 10px;
+}
+
+
+
+/* =====================================================
+   SPONSOR CTA BUTTON
+===================================================== */
+
 
 .expo-sponsor-cta-btn{
     display:inline-flex;
@@ -1248,8 +1503,11 @@ RESPONSIVE
     transition:all .35s ease;
 }
 
+
 .expo-sponsor-cta-btn:hover{
+
     background:linear-gradient(135deg,#2d6a4f,#40916c);
+
     color:#fff;
 
     transform:translateY(-5px);
@@ -1257,18 +1515,233 @@ RESPONSIVE
     box-shadow:
         0 18px 40px rgba(27,67,50,.25),
         0 0 18px rgba(212,175,55,.35);
+
 }
+
 
 .expo-sponsor-cta-btn::after{
+
     content:"→";
+
     font-size:1.2rem;
+
     transition:transform .3s ease;
+
 }
+
 
 .expo-sponsor-cta-btn:hover::after{
+
     transform:translateX(6px);
+
 }
 
+/* =====================================================
+   INFINITE SPONSOR SLIDER
+===================================================== */
+
+.sponsor-slider {
+
+    width: 100%;
+    overflow: hidden;
+
+    margin-top: 50px;
+
+}
+
+
+.sponsor-track {
+
+    display: flex;
+
+    width: max-content;
+
+    gap: 35px;
+
+    animation: sponsorMove 25s linear infinite;
+
+}
+
+
+/* Pause when user hovers */
+.sponsor-track:hover {
+
+    animation-play-state: paused;
+
+}
+
+
+/* Sponsor cards */
+
+.sponsor-card {
+
+    width: 220px;
+    height: 230px;
+
+    flex-shrink: 0;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#111;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+    transition:.3s ease;
+
+}
+
+
+
+.sponsor-card img {
+
+    width:120px;
+    height:120px;
+
+    object-fit:contain;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.sponsor-card:hover {
+
+    transform:translateY(-8px);
+
+}
+
+
+
+/* Infinite movement */
+
+@keyframes sponsorMove {
+
+    from {
+
+        transform:translateX(0);
+
+    }
+
+    to {
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+/* =====================================================
+   TABLETS
+===================================================== */
+
+@media(max-width:768px){
+
+    .sponsor-track {
+        gap:20px;
+    }
+
+
+    .sponsor-card {
+
+        width:150px;
+        height:130px;
+
+        padding:15px;
+
+        border-radius:12px;
+
+    }
+
+
+    .sponsor-card img {
+
+        width:70px;
+        height:70px;
+
+        margin-bottom:8px;
+
+    }
+
+
+    .sponsor-card h6 {
+
+        font-size:.75rem;
+
+        line-height:1.2;
+        color:   #03301d ;
+
+    }
+
+}
+
+
+
+
+/* =====================================================
+   MOBILE PHONES
+===================================================== */
+
+@media(max-width:480px){
+
+
+    .sponsor-track {
+
+        gap:15px;
+
+    }
+
+
+    .sponsor-card {
+
+        width:120px;
+        height:110px;
+
+        padding:10px;
+
+        border-radius:10px;
+
+        box-shadow:
+        0 5px 15px rgba(0,0,0,0.08);
+
+    }
+
+
+    .sponsor-card img {
+
+        width:55px;
+        height:55px;
+
+        margin-bottom:5px;
+
+    }
+
+
+    .sponsor-card h6 {
+
+        font-size:.65rem;
+
+        font-weight:700;
+        color:  #03301d ;
+
+    }
+
+}
 /* ============================================
    SPONSORSHIP PACKAGE CARDS
    ============================================ */
@@ -1494,7 +1967,7 @@ RESPONSIVE
 .sponsor-card h6 {
     font-weight: 700;
     font-size: 1rem;
-    color: #222;
+    color:  #03301d ;
 
 
 }
